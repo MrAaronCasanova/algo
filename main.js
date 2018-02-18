@@ -201,3 +201,51 @@ CodeByte -mraa-1bor
 // }
 //
 // console.log(CheckNums(3, 122));
+
+/* ------ CheckNums ------ */
+
+// function TimeConvert(num) {
+//   let hour = Math.floor(num / 60);
+//   let min = num % 60;
+//
+//   // code goes here
+//   return `${hour}:${min}`;
+// }
+//
+// // keep this function call here
+// console.log(TimeConvert(126));
+// console.log(TimeConvert(45));
+
+/* ------ AlphabetSoup ------ */
+
+// function AlphabetSoup(str) {
+//   return str.split('').sort().join('');
+// }
+//
+// console.log(AlphabetSoup('coderbyte'));
+// console.log(AlphabetSoup('hooplah'));
+
+/* ------ KaprekarsConstant ------ */
+
+// // Casy
+// function KaprekarsConstant(num) {
+//   let count = 0;
+//   let checkNum = num;
+//   while (checkNum !== 6174) {
+//     let checkArr = checkNum.toString().split('').sort();
+//     while (checkArr.length !== 4) {
+//       checkArr.unshift(0);
+//     }
+//
+//     let ascNum = checkArr.join('');
+//     let descNum = checkArr.reverse().join('');
+//     checkNum = descNum - ascNum;
+//     count++;
+//   }
+//
+//   return count;
+// }
+//
+// console.log(KaprekarsConstant(11));
+// console.log(KaprekarsConstant(2111));
+// console.log(KaprekarsConstant(9831));
