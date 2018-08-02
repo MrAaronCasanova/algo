@@ -5,7 +5,7 @@ class AlgoPlayground extends Component {
   render() {
     return (
       <div>
-        <LongestWord sentence="Argument goes here">
+        <LongestWord sentence="the $$$longest# word is casanova">
           {longestWord => <h3>{longestWord}</h3>}
         </LongestWord>
       </div>
