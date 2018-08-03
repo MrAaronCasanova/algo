@@ -1,13 +1,22 @@
 import React, { Component } from 'react';
-import LongestWord from './../algo-widgets/LongestWord';
-
+import CheckPalindrome from './../algo-widgets/CheckPalindrome';
 class AlgoPlayground extends Component {
   render() {
     return (
       <div>
-        <LongestWord sentence="the $$$longest# word is casanova">
-          {longestWord => <h3>{longestWord}</h3>}
-        </LongestWord>
+        <CheckPalindrome inputString="evil olive">
+          {isPalindrome =>
+            isPalindrome ? (
+              <span role="img" aria-label="Thumbs Up">
+                👍🏽
+              </span>
+            ) : (
+              <span role="img" aria-label="Thumbs Down">
+                👎🏽
+              </span>
+            )
+          }
+        </CheckPalindrome>
       </div>
     );
   }

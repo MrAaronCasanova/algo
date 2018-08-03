@@ -1,7 +1,7 @@
 const LongestWord = ({ sentence, children }) => {
-  // first create an array of every word excluding special characters
+  // first create an array of every word excluding special characters/stripping away punctuation
   let senArr = sentence.match(/[a-z0-9]+/gi);
-  // then sort the array and return first item
+  // sort the array in decending order and return the first item
   let longestWord = senArr.sort((a, b) => b.length - a.length)[0];
 
   return children(longestWord);
@@ -15,3 +15,5 @@ export default LongestWord;
   {longestWord => <h3>{longestWord}</h3>}
 </LongestWord>
 */
+
+// https://www.coderbyte.com/results/aaronccasanova:Longest%20Word:JavaScript
