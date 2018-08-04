@@ -1,22 +1,12 @@
 import React, { Component } from 'react';
-import CheckPalindrome from './../algo-widgets/CheckPalindrome';
+import AdjacentElementsProduct from './../algo-widgets/AdjacentElementsProduct';
 class AlgoPlayground extends Component {
   render() {
     return (
       <div>
-        <CheckPalindrome inputString="evil olive">
-          {isPalindrome =>
-            isPalindrome ? (
-              <span role="img" aria-label="Thumbs Up">
-                👍🏽
-              </span>
-            ) : (
-              <span role="img" aria-label="Thumbs Down">
-                👎🏽
-              </span>
-            )
-          }
-        </CheckPalindrome>
+        <AdjacentElementsProduct inputArray={[3, 6, -2, -5, 7, 3]}>
+          {largestProduct => <div>{largestProduct}</div>}
+        </AdjacentElementsProduct>
       </div>
     );
   }
