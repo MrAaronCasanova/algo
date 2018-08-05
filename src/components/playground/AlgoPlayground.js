@@ -1,12 +1,30 @@
 import React, { Component } from 'react';
-import AdjacentElementsProduct from './../algo-widgets/AdjacentElementsProduct';
+import ShapeArea from './../algo-widgets/ShapeArea';
 class AlgoPlayground extends Component {
   render() {
     return (
       <div>
-        <AdjacentElementsProduct inputArray={[3, 6, -2, -5, 7, 3]}>
-          {largestProduct => <div>{largestProduct}</div>}
-        </AdjacentElementsProduct>
+        <ShapeArea n={15}>
+          {area => (
+            <div
+              style={{
+                minHeight: '100vh',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center'
+              }}
+            >
+              <div
+                style={{
+                  background: 'lightsteelblue',
+                  height: `${area}px`,
+                  width: `${area}px`,
+                  transform: 'rotate(45deg)'
+                }}
+              />
+            </div>
+          )}
+        </ShapeArea>
       </div>
     );
   }
