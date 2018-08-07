@@ -28,3 +28,5 @@ export default MakeArrayConsecutive2;
   {count => <div>{count} values are missing from the array!</div>}
 </MakeArrayConsecutive2>
 */
+
+// https://app.codesignal.com/arcade/intro/level-2/bq2XnSr5kbHqpHGJC
