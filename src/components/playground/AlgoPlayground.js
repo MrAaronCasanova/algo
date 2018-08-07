@@ -1,30 +1,12 @@
 import React, { Component } from 'react';
-import ShapeArea from './../algo-widgets/ShapeArea';
+import MakeArrayConsecutive2 from './../algo-widgets/MakeArrayConsecutive2';
 class AlgoPlayground extends Component {
   render() {
     return (
       <div>
-        <ShapeArea n={15}>
-          {area => (
-            <div
-              style={{
-                minHeight: '100vh',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center'
-              }}
-            >
-              <div
-                style={{
-                  background: 'lightsteelblue',
-                  height: `${area}px`,
-                  width: `${area}px`,
-                  transform: 'rotate(45deg)'
-                }}
-              />
-            </div>
-          )}
-        </ShapeArea>
+        <MakeArrayConsecutive2 statues={[2, 4, 5, 7]}>
+          {count => <div>{count} values are missing from the array!</div>}
+        </MakeArrayConsecutive2>
       </div>
     );
   }
