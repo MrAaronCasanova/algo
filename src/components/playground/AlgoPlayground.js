@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
-import MatrixElementsSum from './../algo-widgets/MatrixElementsSum';
+import AllLongestStrings from './../algo-widgets/AllLongestStrings';
 class AlgoPlayground extends Component {
   render() {
     return (
       <div>
-        <MatrixElementsSum matrix={[[0, 1, 1, 2], [0, 5, 0, 0], [2, 0, 3, 3]]}>
-          {priceTotal => (
-            <div>The total cost for the rooms is ${priceTotal}</div>
+        <AllLongestStrings
+          inputArray={['mmm', '**', 'eee', 'ooo', '_', 'www', '!']}
+        >
+          {longestStrings => (
+            <div>
+              {longestStrings.map((str, i) => <span key={i}>{str}</span>)}
+            </div>
           )}
-        </MatrixElementsSum>
+        </AllLongestStrings>
       </div>
     );
   }
