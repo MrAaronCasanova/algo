@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import AlmostIncreasingSequence from './../algo-widgets/AlmostIncreasingSequence';
+import MatrixElementsSum from './../algo-widgets/MatrixElementsSum';
 class AlgoPlayground extends Component {
   render() {
     return (
       <div>
-        <AlmostIncreasingSequence sequence={[1, 3, 2, 4]}>
-          {isIncreasing => <div>{`${isIncreasing}`}</div>}
-        </AlmostIncreasingSequence>
+        <MatrixElementsSum matrix={[[0, 1, 1, 2], [0, 5, 0, 0], [2, 0, 3, 3]]}>
+          {priceTotal => (
+            <div>The total cost for the rooms is ${priceTotal}</div>
+          )}
+        </MatrixElementsSum>
       </div>
     );
   }
