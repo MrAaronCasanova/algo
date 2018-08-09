@@ -1,18 +1,14 @@
 import React, { Component } from 'react';
-import AllLongestStrings from './../algo-widgets/AllLongestStrings';
+import CommonCharacterCount from './../algo-widgets/CommonCharacterCount';
 class AlgoPlayground extends Component {
   render() {
     return (
       <div>
-        <AllLongestStrings
-          inputArray={['mmm', '**', 'eee', 'ooo', '_', 'www', '!']}
-        >
-          {longestStrings => (
-            <div>
-              {longestStrings.map((str, i) => <span key={i}>{str}</span>)}
-            </div>
+        <CommonCharacterCount s1="aabcc" s2="adcaa">
+          {commonCharacters => (
+            <div>The two strings have {commonCharacters} common characters</div>
           )}
-        </AllLongestStrings>
+        </CommonCharacterCount>
       </div>
     );
   }
