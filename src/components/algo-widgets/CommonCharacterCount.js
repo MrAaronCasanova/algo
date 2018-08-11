@@ -1,7 +1,7 @@
 const CommonCharacterCount = ({ s1, s2, children }) => {
   let count = 0;
   s1.split('').forEach(letter => {
-    if (s2.search(letter) !== -1) {
+    if (s2.indexOf(letter) !== -1) {
       s2 = s2.replace(letter, '');
       count++;
     }

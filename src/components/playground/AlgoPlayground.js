@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
-import CommonCharacterCount from './../algo-widgets/CommonCharacterCount';
+import SortByHeight from './../algo-widgets/SortByHeight';
 class AlgoPlayground extends Component {
   render() {
     return (
       <div>
-        <CommonCharacterCount s1="aabcc" s2="adcaa">
-          {commonCharacters => (
-            <div>The two strings have {commonCharacters} common characters</div>
+        <SortByHeight a={[-1, 150, 190, 170, -1, -1, 160, 190]}>
+          {arr => (
+            <div>
+              {arr.map((item, i) => (
+                <span key={i}>{item} </span>
+              ))}
+            </div>
           )}
-        </CommonCharacterCount>
+        </SortByHeight>
       </div>
     );
   }
