@@ -51,4 +51,5 @@ export default AlmostIncreasingSequence;
 //
 // return children(count <= 1);
 
+// #7
 // https://app.codesignal.com/arcade/intro/level-2/2mxbGwLzvkTCKAJMG/solutions/k6S5Q8x6sqJnrRcha

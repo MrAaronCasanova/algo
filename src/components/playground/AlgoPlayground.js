@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
-import AdjacentElementsProduct from './../algo-widgets/AdjacentElementsProduct';
+import CheckPalindrome from './../algo-widgets/CheckPalindrome';
 class AlgoPlayground extends Component {
   render() {
     return (
       <div>
-        <AdjacentElementsProduct inputArray={[3, 6, -2, -5, 7, 3]}>
-          {result => (
+        <CheckPalindrome inputString="Evil Olive">
+          {isPalidrome => (
             <div>
-              {result} is the largest product of all the adjecent elements
+              {isPalidrome
+                ? 'Input is a palidrome'
+                : 'Input is not a palidrome'}
             </div>
           )}
-        </AdjacentElementsProduct>
+        </CheckPalindrome>
       </div>
     );
   }
