@@ -41,4 +41,5 @@ export default FirstFactorial;
 //   return children(factorial(num));
 // };
 
+// #coderbyte
 // https://www.coderbyte.com/results/aaronccasanova:First%20Factorial:JavaScript

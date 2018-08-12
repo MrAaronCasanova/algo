@@ -46,4 +46,5 @@ export default CommonCharacterCount;
 
 // return children(total);
 
+// #10
 // https://app.codesignal.com/arcade/intro/level-3/JKKuHJknZNj4YGL32/solutions/2Adt9QPoztXedxjv6
