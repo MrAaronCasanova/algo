@@ -1,18 +1,16 @@
 import React, { Component } from 'react';
-import SortByHeight from './../algo-widgets/SortByHeight';
+import AdjacentElementsProduct from './../algo-widgets/AdjacentElementsProduct';
 class AlgoPlayground extends Component {
   render() {
     return (
       <div>
-        <SortByHeight a={[-1, 150, 190, 170, -1, -1, 160, 190]}>
-          {arr => (
+        <AdjacentElementsProduct inputArray={[3, 6, -2, -5, 7, 3]}>
+          {result => (
             <div>
-              {arr.map((item, i) => (
-                <span key={i}>{item} </span>
-              ))}
+              {result} is the largest product of all the adjecent elements
             </div>
           )}
-        </SortByHeight>
+        </AdjacentElementsProduct>
       </div>
     );
   }

@@ -7,6 +7,17 @@ const SortByHeight = ({ a, children }) => {
 export default SortByHeight;
 
 //* ------ Usage ------ *//
+/*
+<SortByHeight a={[-1, 150, 190, 170, -1, -1, 160, 190]}>
+  {arr => (
+    <div>
+      {arr.map((item, i) => (
+        <span key={i}>{item} </span>
+      ))}
+    </div>
+  )}
+</SortByHeight>
+*/
 
 //* ---------- Coding360 Approach with mod -------- *//
 // let ascArr = a.filter(item => item !== -1).sort((a, b) => a - b);

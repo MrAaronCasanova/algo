@@ -1,23 +1,20 @@
 const AlmostIncreasingSequence = ({ sequence, children }) => {
   let count = 0;
 
-  for (let i = 0; i < sequence.length; i++) {
+  sequence.forEach((val, i, arr) => {
     //first check if current val is less than previous
-    if (sequence[i] <= sequence[i - 1]) {
+    if (val <= arr[i - 1]) {
       //increment counter
       count++;
       // seconday check for increasing value
       // if current val is less then (2)previous and next val is less than previous val
       // force false
-      if (
-        sequence[i] <= sequence[i - 2] &&
-        sequence[i + 1] <= sequence[i - 1]
-      ) {
+      if (arr[i] <= arr[i - 2] && arr[i + 1] <= arr[i - 1]) {
         // increase count once more to force false
         count++;
       }
     }
-  }
+  });
 
   return children(count <= 1);
 };
@@ -30,5 +27,28 @@ export default AlmostIncreasingSequence;
   {isIncreasing => <div>{`${isIncreasing}`}</div>}
 </AlmostIncreasingSequence>
 */
+
+//* --------- Alt Approach ------- *//
+// let count = 0;
+
+// for (let i = 0; i < sequence.length; i++) {
+//   //first check if current val is less than previous
+//   if (sequence[i] <= sequence[i - 1]) {
+//     //increment counter
+//     count++;
+//     // seconday check for increasing value
+//     // if current val is less then (2)previous and next val is less than previous val
+//     // force false
+//     if (
+//       sequence[i] <= sequence[i - 2] &&
+//       sequence[i + 1] <= sequence[i - 1]
+//     ) {
+//       // increase count once more to force false
+//       count++;
+//     }
+//   }
+// }
+//
+// return children(count <= 1);
 
 // https://app.codesignal.com/arcade/intro/level-2/2mxbGwLzvkTCKAJMG/solutions/k6S5Q8x6sqJnrRcha
