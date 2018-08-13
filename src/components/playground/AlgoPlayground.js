@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
-import CheckPalindrome from './../algo-widgets/CheckPalindrome';
+import AlternatingSums from './../algo-widgets/AlternatingSums';
 class AlgoPlayground extends Component {
   render() {
     return (
       <div>
-        <CheckPalindrome inputString="Evil Olive">
-          {isPalidrome => (
-            <div>
-              {isPalidrome
-                ? 'Input is a palidrome'
-                : 'Input is not a palidrome'}
-            </div>
-          )}
-        </CheckPalindrome>
+        <AlternatingSums a={[50, 60, 60, 45, 70]}>
+          {teamWeights =>
+            teamWeights.map((val, i) => (
+              <div key={i}>
+                Team {i + 1}: {val}
+                /lb 🏋️‍
+              </div>
+            ))
+          }
+        </AlternatingSums>
       </div>
     );
   }
