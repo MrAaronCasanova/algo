@@ -1,11 +1,20 @@
 const AlternatingSums = ({ a, children }) => {
-  let sum1 = 0;
-  let sum2 = 0;
-  a.forEach((val, i) => (i % 2 === 0 ? (sum1 += val) : (sum2 += val)));
-  return children([sum1, sum2]);
+  return children(
+    a.reduce(
+      (acc, val, i) =>
+        i % 2 === 0 ? [acc[0] + val, acc[1]] : [acc[0], acc[1] + val],
+      [0, 0]
+    )
+  );
 };
 
 export default AlternatingSums;
+
+//* ------ Alt Approach ------ *//
+// let sum1 = 0;
+// let sum2 = 0;
+// a.forEach((val, i) => (i % 2 === 0 ? (sum1 += val) : (sum2 += val)));
+// return children([sum1, sum2]);
 
 //* ------ Usage ------ *//
 /*
