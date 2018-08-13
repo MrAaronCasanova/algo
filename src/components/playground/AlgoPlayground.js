@@ -1,19 +1,12 @@
 import React, { Component } from 'react';
-import AlternatingSums from './../algo-widgets/AlternatingSums';
+import AddBorder from './../algo-widgets/AddBorder';
 class AlgoPlayground extends Component {
   render() {
     return (
       <div>
-        <AlternatingSums a={[50, 60, 60, 45, 70]}>
-          {teamWeights =>
-            teamWeights.map((val, i) => (
-              <div key={i}>
-                Team {i + 1}: {val}
-                /lb 🏋️‍
-              </div>
-            ))
-          }
-        </AlternatingSums>
+        <AddBorder picture={['abc', 'ded']}>
+          {newPic => newPic.map((val, i) => <div key={i}> {val} </div>)}
+        </AddBorder>
       </div>
     );
   }
