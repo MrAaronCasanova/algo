@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
-import AreSimilar from './../algo-widgets/AreSimilar';
+import ArrayChange from './../algo-widgets/ArrayChange';
 class AlgoPlayground extends Component {
   render() {
     return (
       <div>
-        <AreSimilar a={[1, 2, 3]} b={[2, 1, 3]}>
-          {similar => (
+        <ArrayChange inputArray={[1, 1, 1]}>
+          {count => (
             <div>
-              {similar
-                ? 'The two arrays are similar'
-                : 'The two arrays are NOT similar'}
+              {Array.from({ length: count }, () => (
+                <span role="img" aria-label="Clock">
+                  ⏰
+                </span>
+              ))}
             </div>
           )}
-        </AreSimilar>
+        </ArrayChange>
       </div>
     );
   }
