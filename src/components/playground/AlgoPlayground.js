@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
-import PalindromeRearranging from './../algo-widgets/PalindromeRearranging';
+import AreEquallyStrong from './../algo-widgets/AreEquallyStrong';
 class AlgoPlayground extends Component {
   render() {
     return (
       <div>
-        <PalindromeRearranging inputString={'aabb'}>
-          {isPossible => <div>{isPossible ? '🎊🎁🎉' : '😿'}</div>}
-        </PalindromeRearranging>
+        <AreEquallyStrong
+          yourLeft={10}
+          yourRight={15}
+          friendsLeft={15}
+          friendsRight={10}
+        >
+          {isEqual => <div>{isEqual ? '💪💪💪💪' : '👎🏽'}</div>}
+        </AreEquallyStrong>
       </div>
     );
   }
