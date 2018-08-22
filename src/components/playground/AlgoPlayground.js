@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
-import ArrayMaximalAdjacentDifference from './../algo-widgets/ArrayMaximalAdjacentDifference';
+import AvoidObstacles from '../algo-widgets/AvoidObstacles';
 class AlgoPlayground extends Component {
   render() {
     return (
       <div>
-        <ArrayMaximalAdjacentDifference inputArray={[20, 96, 14, 0, 6]}>
-          {maxDiff => <div>{maxDiff} bottles of 🍻 on the wall!</div>}
-        </ArrayMaximalAdjacentDifference>
+        <AvoidObstacles inputArray={[5, 3, 6, 7, 9]}>
+          {minLength =>
+            Array.from({ length: minLength }, (empty, i) => (
+              <span key={i}>{i % 2 === 0 ? '👟' : '🌵'}</span>
+            ))
+          }
+        </AvoidObstacles>
       </div>
     );
   }
