@@ -1,16 +1,28 @@
 import React, { Component } from 'react';
-import AvoidObstacles from '../algo-widgets/AvoidObstacles';
+import MeanMedianMode from '../algo-widgets/MeanMedianMode';
 class AlgoPlayground extends Component {
   render() {
     return (
       <div>
-        <AvoidObstacles inputArray={[5, 3, 6, 7, 9]}>
-          {minLength =>
-            Array.from({ length: minLength }, (empty, i) => (
-              <span key={i}>{i % 2 === 0 ? '👟' : '🌵'}</span>
-            ))
-          }
-        </AvoidObstacles>
+        <MeanMedianMode inputArray={[1, 2, 3, 4, 5, 4, 6, 1]}>
+          {({ mean, median, mode }) => (
+            <div>
+              <p>
+                <strong>Mean</strong>: {mean}
+              </p>
+              <p>
+                <strong>Median</strong>: {median}
+              </p>
+              <p>
+                <strong>Mode</strong>: \
+                {mode.map(el => (
+                  <span>\ {el} \</span>
+                ))}
+                \
+              </p>
+            </div>
+          )}
+        </MeanMedianMode>
       </div>
     );
   }

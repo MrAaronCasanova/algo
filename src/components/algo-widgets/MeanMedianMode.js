@@ -1,9 +1,9 @@
-function meanMedianMode(array) {
-  return {
-    mean: getMean(array),
-    median: getMedian(array),
-    mode: getMode(array)
-  };
+function MeanMedianMode({ inputArray, children }) {
+  return children({
+    mean: getMean(inputArray),
+    median: getMedian(inputArray),
+    mode: getMode(inputArray)
+  });
 }
 
 function getMean(array) {
@@ -54,5 +54,29 @@ function getMode(array) {
   return modes;
 }
 
-let mmm = meanMedianMode([1, 2, 3, 4, 5, 4, 6, 1]);
-mmm;
+export default MeanMedianMode;
+
+//* ------ Usage ------ *//
+/*
+<MeanMedianMode inputArray={[1, 2, 3, 4, 5, 4, 6, 1]}>
+  {({ mean, median, mode }) => (
+    <div>
+      <p>
+        <strong>Mean</strong>: {mean}
+      </p>
+      <p>
+        <strong>Median</strong>: {median}
+      </p>
+      <p>
+        <strong>Mode</strong>: \
+        {mode.map((el, i) => (
+          <span key={i}>\ {el} \</span>
+        ))}
+        \
+      </p>
+    </div>
+  )}
+</MeanMedianMode>
+*/
+
+// Stephen Grider
