@@ -34,3 +34,60 @@ function factorial(num) {
   if (num === 1) return 1;
   return num * factorial(num - 1);
 }
+
+// Where things go wrong
+// No base case
+// Forgetting to return or returning the wrong thing!
+// Stack overflow!
+
+// ------ Helper Method Recursion ------ //
+function outer(input) {
+  var outerScopedVariable = [];
+
+  function helper(helperInput) {
+    // modify the outerScopedVariable
+    helper(helperInput--);
+  }
+
+  helper(input);
+
+  return outerScopedVariable;
+}
+
+// ------ ^^^ in action vvv ------ //
+
+function collectOddValues(arr) {
+  let result = [];
+
+  function helper(helperInput) {
+    if (helperInput.length === 0) {
+      return;
+    }
+
+    if (helperInput[0] % 2 !== 0) {
+      result.push(helperInput[0]);
+    }
+
+    helper(helperInput.slice(1));
+  }
+
+  helper(arr);
+
+  return result;
+}
+
+// ------ vvv --- more --- vvv ------ //
+
+function recursiveRange(range) {
+  let total = 0;
+
+  function acc(num) {
+    if (num === 0) return;
+    total += num;
+    return acc(num - 1);
+  }
+
+  acc(range);
+
+  return total;
+}
