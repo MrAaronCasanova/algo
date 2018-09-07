@@ -36,3 +36,8 @@ function binarySearch(arr, val) {
 
   return arr[middle] === val ? middle : -1;
 }
+
+// ------------------- IMPORTANT ------------------
+// KNP COMING SOON
+// Section 10, Lecture 66
+// I'm reworking the videos on KNP String Search due to some overwhelming feedback :)
